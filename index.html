@@ -36,6 +36,7 @@ function authenticate(){
 
 	
 	setTimeout(function(){
+		console.log("inside2");
 		var CurrentLocation = window.location.href;
 		lpTag.newPage(CurrentLocation, {section: "vfalbania"});
 		lpTag.sdes.push({
@@ -54,6 +55,7 @@ function authenticate(){
 window.onload = function() {
 	
 	authenticate();
+	console.log("inside1");
 
 }
   
