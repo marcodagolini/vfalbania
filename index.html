@@ -76,18 +76,18 @@ function authenticate(){
 		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
 		 if(data.state === "waiting"){
 			 var $htmlOrBody = $('html, body'), // scrollTop works on <body> for some browsers, <html> for others
-			     scrollTopPadding = 8;
+			     scrollTopPadding = 50;
 			 
 			 console.log($('.lp_input_area').length);
 			 
 			 $('.lpview_form_textarea').focus(function() {
-				 setTimeout(function(){
+
 				 // get textarea's offset top position
 				 var textareaTop = $(this).offset().top;
 				 // scroll to the textarea
 				 $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
 				 console.log(textareaTop - scrollTopPadding);
-					 }, 3000);
+
 			 });
 		 }
 	}	
