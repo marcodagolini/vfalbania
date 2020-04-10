@@ -81,9 +81,9 @@ function authenticate(){
 			 console.log($('.lp_input_area').length);
 			 
 			 $('.lpview_form_textarea').focus(function() {
-				 
+				 var textareaTop = $('.lpview_form_textarea').offset().top;
 				 setTimeout(function(){
-					 var textareaTop = $('.lpview_form_textarea').offset().top;
+					
 					 $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
 					 console.log(scrollTopPadding);
 				 
