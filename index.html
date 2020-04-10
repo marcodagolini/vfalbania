@@ -80,8 +80,6 @@ function authenticate(){
 		 if(data.state === "waiting"){
 			 setTimeout(function(){
 				 var $htmlOrBody = $('html, body'); // scrollTop works on <body> for some browsers, <html> for others
-				 console.log($('.lp_input_area').length);
-				 var textareaTop = $('.lpview_form_textarea').offset().top;
 				 $('.lpview_form_textarea').focus(function() {
 					 setTimeout(function(){
 						 $htmlOrBody.scrollTop($('.lp_bottom_area').height());
