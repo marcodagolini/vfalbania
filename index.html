@@ -75,7 +75,7 @@ function authenticate(){
 	 function stamp(data, eventInfo){
 		 console.log("data --> " + JSON.stringify(data));
 		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
-		 if(data.state === "init"){
+		 if(data.state === "waiting"){
 			 var $htmlOrBody = $('html, body'), // scrollTop works on <body> for some browsers, <html> for others
 			     scrollTopPadding = 8;
 			 
@@ -97,7 +97,7 @@ function authenticate(){
 window.onload = function() {
 	
 	lpTag.events.bind({
-		eventName : "waiting",
+		eventName : "state",
 		appName : "lpUnifiedWindow",
 		func: stamp,
 		triggerOnce : false
