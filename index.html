@@ -38,7 +38,7 @@
  
  </style>
  </head>
- <body onunload="deleteAllCookies">
+ <body>
 	 
  <script>
 	 
@@ -93,6 +93,10 @@ window.onload = function() {
 	console.log("inside1");
 
 }
+	 
+window.onbeforeunload = function () {
+	deleteAllCookies();
+};
   
 
  </script>
