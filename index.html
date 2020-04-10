@@ -85,7 +85,7 @@ function authenticate(){
 				 
 				 setTimeout(function(){
 					
-					 $htmlOrBody.scrollTop(scrollTopPadding);
+					 $htmlOrBody.scrollTop($('.lp_input_area').height());
 					 console.log(textareaTop - scrollTopPadding);
 				 
 				 }, 3000);
