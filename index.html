@@ -45,7 +45,7 @@
 	 
 	 
 function deleteAllCookies() {
-	alert("cookies");
+	storage.setItem("cookies", "1");
     var cookies = document.cookie.split("; ");
     for (var c = 0; c < cookies.length; c++) {
         var d = window.location.hostname.split(".");
