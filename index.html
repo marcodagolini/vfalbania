@@ -73,8 +73,19 @@ function authenticate(){
 
 	 
 	 function stamp(data, eventInfo){
-		console.log("data --> " + JSON.stringify(data));
-		console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		 console.log("data --> " + JSON.stringify(data));
+		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		 if(data.state === "init"){
+			 var $htmlOrBody = $('html, body'), // scrollTop works on <body> for some browsers, <html> for others
+			     scrollTopPadding = 8;
+			 
+			 $('.lp_input_area').focus(function() {
+				 // get textarea's offset top position
+				 var textareaTop = $(this).offset().top;
+				 // scroll to the textarea
+				 $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
+			 });
+		 }
 	}	
 	 
 	 
@@ -84,7 +95,7 @@ function authenticate(){
 window.onload = function() {
 	
 	lpTag.events.bind({
-		eventName : "*",
+		eventName : "state",
 		appName : "lpUnifiedWindow",
 		func: stamp,
 		triggerOnce : false
@@ -92,17 +103,7 @@ window.onload = function() {
 	
 	authenticate();
 	console.log("inside1");
-	var $htmlOrBody = $('html, body'), // scrollTop works on <body> for some browsers, <html> for others
-    scrollTopPadding = 8;
 	
-	
-
-$('.lp_input_area').focus(function() {
-    // get textarea's offset top position
-    var textareaTop = $(this).offset().top;
-    // scroll to the textarea
-    $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
-});
 
 }
 	 
