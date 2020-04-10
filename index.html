@@ -82,12 +82,14 @@ function authenticate(){
 			 console.log($('.lp_input_area').length);
 			 
 			 $('.lpview_form_textarea').focus(function() {
+				 
+				 window.onresize = function(event) {
+					 var textareaTop = $(this).offset().top;
+					 $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
+					 console.log(textareaTop - scrollTopPadding);
+				 
+				 };
 
-				 // get textarea's offset top position
-				 var textareaTop = $(this).offset().top;
-				 // scroll to the textarea
-				 $htmlOrBody.scrollTop(textareaTop - scrollTopPadding);
-				 console.log(textareaTop - scrollTopPadding);
 
 			 });
 		 }
