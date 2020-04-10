@@ -79,6 +79,8 @@ function authenticate(){
 			 var $htmlOrBody = $('html, body'), // scrollTop works on <body> for some browsers, <html> for others
 			     scrollTopPadding = 8;
 			 
+			 console.log($('.lp_input_area').length);
+			 
 			 $('.lp_input_area').focus(function() {
 				 // get textarea's offset top position
 				 var textareaTop = $(this).offset().top;
