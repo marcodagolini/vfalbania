@@ -16,6 +16,25 @@
 <!-- END LivePerson Monitor. -->
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	 
+	 <script>
+		 
+	function sendLocation(){
+		 setTimeout(function(){
+			 var CurrentLocation = window.location.href;
+			 lpTag.newPage(CurrentLocation, {section: "vfalbania"});
+			 lpTag.sdes.push({
+				 "type": "ctmrinfo",
+				 "info": {
+					 customerId: '1'
+				 }
+			 });
+		 }, 3000);
+	 }
+		 
+	 sendLocation();
+		 
+	 </script>
 
  
  
@@ -52,18 +71,7 @@
 	 
 	 
 	 
-	 function sendLocation(){
-		 setTimeout(function(){
-			 var CurrentLocation = window.location.href;
-			 lpTag.newPage(CurrentLocation, {section: "vfalbania"});
-			 lpTag.sdes.push({
-				 "type": "ctmrinfo",
-				 "info": {
-					 customerId: '1'
-				 }
-			 });
-		 }, 3000);
-	 }
+
 	
 	 
 
@@ -101,7 +109,7 @@
 			 func: adjust,
 			 triggerOnce : false
 		 });
-		 sendLocation();
+		 // sendLocation();
 	 }
 	 
 
