@@ -48,44 +48,42 @@
  
 	 
 	 
-function authenticate(){
-	
-
-
-	
-	setTimeout(function(){
-		console.log("inside2");
-		var CurrentLocation = window.location.href;
-		lpTag.newPage(CurrentLocation, {section: "vfalbania"});
-		lpTag.sdes.push({
-			"type": "ctmrinfo",
-			"info": {
-				customerId: '1'
-			}
-		});
 	 
-		
-	}, 3000);
-	
-}
+	 
+	 
+	 function sendLocation(){
+		 setTimeout(function(){
+			 var CurrentLocation = window.location.href;
+			 lpTag.newPage(CurrentLocation, {section: "vfalbania"});
+			 lpTag.sdes.push({
+				 "type": "ctmrinfo",
+				 "info": {
+					 customerId: '1'
+				 }
+			 });
+		 }, 3000);
+	 }
 	
 	 
 
 	 
-	 function stamp(data, eventInfo){
-		 console.log("data --> " + JSON.stringify(data));
-		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
+	 function adjust(data, eventInfo){
+
 		 if(data.state === "waiting"){
 			 setTimeout(function(){
-				 $(".lpview_form_textarea").blur();
-				 // alert($('.lpview_form_textarea').length);
-				 var $htmlOrBody = $('html, body'); // scrollTop works on <body> for some browsers, <html> for others
-				 $('.lpview_form_textarea').focus(function() {
-					 setTimeout(function(){
-						 $htmlOrBody.scrollTop($('.lp_bottom_area').height());
-						 // alert($('.lp_bottom_area').height());
-					 }, 400);
-				 });
+				 var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
+				 //iPhone Version:
+				 if (isMacLike || isIOS) {
+					 $(".lpview_form_textarea").blur();
+					 var $htmlOrBody = $('html, body'); // scrollTop works on <body> for some browsers, <html> for others
+					 $('.lpview_form_textarea').focus(function() {
+						 setTimeout(function(){
+							 $htmlOrBody.scrollTop($('.lp_bottom_area').height());
+						 }, 400);
+					 });
+				 }
+				 
 			 }, 1000);
 		 }
 	}	
@@ -94,21 +92,16 @@ function authenticate(){
 	 
 	 
 	 
-	 
-window.onload = function() {
-	
-	lpTag.events.bind({
-		eventName : "state",
-		appName : "lpUnifiedWindow",
-		func: stamp,
-		triggerOnce : false
-	});
-	
-	authenticate();
-	console.log("inside1");
-	
-
-}
+	 window.onload = function() {
+		 
+		 lpTag.events.bind({
+			 eventName : "state",
+			 appName : "lpUnifiedWindow",
+			 func: adjust,
+			 triggerOnce : false
+		 });
+		 sendLocation();
+	 }
 	 
 
   
