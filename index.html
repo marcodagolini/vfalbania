@@ -92,8 +92,10 @@
 			 var refreshIntervalId2;
 			 refreshIntervalId2 = setInterval(function(){
 				 if($('.lp_input_area').length > 0){
-					 $('.lp_input_area').attr('placeholder','Type your answer here');
-					 clearInterval(refreshIntervalId2);
+					 if(!($(".lp_input_area").attr("placeholder"))){
+						 $('.lp_input_area').attr('placeholder','Type your answer here');
+						 clearInterval(refreshIntervalId2);
+					 } 
 				 }
 			 }, 10);
 			 
