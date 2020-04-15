@@ -108,7 +108,10 @@
 			 var refreshIntervalId4;
 			 refreshIntervalId4 = setInterval(function(){
 				 if($('.lp_sender').length > 0){
-					 document.getElementsByClassName('lp_sender').innerHTML = 'Ti';
+					 var myClasses = document.getElementsByClassName("lp_sender");
+					 for(var i = 0; i < myClasses.length; i++) {
+						 myClasses[i].innerHTML = "Ti";
+					 }
 					 clearInterval(refreshIntervalId4);
 				 }
 			 }, 10);
