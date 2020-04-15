@@ -198,8 +198,8 @@
 		 
 		 
 		 $(document).on('DOMNodeInserted', function(e) {
-			 console.log(e);
-			 if (e.target.className=='lpc_message_visitor') { 
+			 console.log(e.target.classList.value);
+			 if (e.target.classList.value.indexOf('lpc_message_visitor') > -1) { 
 				 console.log("hooray");
 			 }
 		 });
