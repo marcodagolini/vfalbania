@@ -112,7 +112,9 @@
 				 if($('.lp_sender').length > 0){
 					 var myClasses = document.getElementsByClassName("lp_sender");
 					 for(var i = 0; i < myClasses.length; i++) {
-						 myClasses[i].innerHTML = "Ti";
+						 if(myClasses[i].innerHTML === "You"){
+							 myClasses[i].innerHTML = "Ti";
+						 } 
 					 }
 					 clearInterval(refreshIntervalId4);
 				 }
