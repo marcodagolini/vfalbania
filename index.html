@@ -92,7 +92,7 @@
 			 refreshIntervalId2 = setInterval(function(){
 				 if($('.lpview_form_textarea').length > 0){
 					 if($(".lpview_form_textarea").attr("placeholder")){
-						 $('.lpview_form_textarea').attr('placeholder','Vendosni këtu tekstin tuaj');
+						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 						 clearInterval(refreshIntervalId2);
 					 } 
 				 }
@@ -103,6 +103,14 @@
 				 if($('#lp_date_line_Today').length > 0){
 					 document.getElementById('lp_date_line_Today').innerHTML = 'Sot';
 					 clearInterval(refreshIntervalId3);
+				 }
+			 }, 10);
+			 
+			 var refreshIntervalId4;
+			 refreshIntervalId4 = setInterval(function(){
+				 if($('.lp_sender').length > 0){
+					 document.getElementsByClassName('lp_sender').innerHTML = 'Ti';
+					 clearInterval(refreshIntervalId4);
 				 }
 			 }, 10);
 			 
