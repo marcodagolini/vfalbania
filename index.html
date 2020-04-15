@@ -82,18 +82,19 @@
 			 
 			 var refreshIntervalId1;
 			 refreshIntervalId1 = setInterval(function(){
-				 
 				 if($('.lp_top-text').length > 0){
 					 $('.lp_top-text').text('na mesazhi');
+					 $(".lp_chatting-with-icon").remove();
 					 clearInterval(refreshIntervalId1);
 				 }
-				 
-				 
-				 
-				 
+			 }, 10);
 			 
-			 
-			 
+			 var refreshIntervalId2;
+			 refreshIntervalId2 = setInterval(function(){
+				 if($('.lp_input_area').length > 0){
+					 $('.lp_input_area').attr('placeholder','Type your answer here');
+					 clearInterval(refreshIntervalId2);
+				 }
 			 }, 10);
 			 
 			 
