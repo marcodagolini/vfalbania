@@ -91,7 +91,7 @@
 			 var refreshIntervalId2;
 			 refreshIntervalId2 = setInterval(function(){
 				 if($('.lp_input_area').length > 0){
-					 if(!($(".lp_input_area").attr("placeholder"))){
+					 if($(".lp_input_area").attr("placeholder")){
 						 $('.lp_input_area').attr('placeholder','Type your answer here');
 						 clearInterval(refreshIntervalId2);
 					 } 
