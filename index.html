@@ -124,11 +124,11 @@
 			 
 			 var refreshIntervalId5;
 			 refreshIntervalId5 = setInterval(function(){
-				 if($('#lp_title').length > 0){
-					 var myClasses = document.getElementById("lp_title");
-					 for(var i = 0; i < myClasses.length; i++) {
-						 if(myClasses[i].innerHTML === "End conversation"){
-							 myClasses[i].innerHTML = "Mbyll biseden";
+				 if($('.lp_title').length > 0){
+					 var myClosure = document.getElementsByClassName("lp_title");
+					 for(var i = 0; i < myClosure.length; i++) {
+						 if(myClosure[i].innerHTML === "End conversation"){
+							 myClosure[i].innerHTML = "Mbyll biseden";
 							 clearInterval(refreshIntervalId5);
 						 } 
 					 }
