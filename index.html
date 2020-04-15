@@ -73,6 +73,9 @@
 		 
 		 console.log("data --> " + JSON.stringify(data));
 		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		 console.log("**********");
+		 console.log("**********");
+		 console.log("**********");
 		 
 		 
 		 
@@ -122,8 +125,8 @@
 		 
 		 
 		 lpTag.events.bind({
-			 eventName : "STORAGE_SELECTED",
-			 appName : "lpUnifiedWindow",
+			 eventName : "*",
+			 appName : "*",
 			 func: translate,
 			 triggerOnce : false
 		 });
