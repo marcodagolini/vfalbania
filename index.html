@@ -225,6 +225,23 @@
 			 }
 			 if (e.target.classList.value.indexOf('lpc_message-area_agent') > -1) { 
 				 console.log("hooray Agent");
+				 var refreshInterval2;
+				 refreshInterval2 = setInterval(function(){
+					 if($('.lp_sender').length > 0){
+						 var myClasses = document.getElementsByClassName("lp_sender");
+						 for(var i = 0; i < myClasses.length; i++) {
+							 if(myClasses[i].innerHTML === "You"){
+								 myClasses[i].innerHTML = "Ti";
+								 $('.lp_time').contents().filter(function() {
+									 return this.nodeType == 3
+								 }).each(function(){
+									 this.textContent = this.textContent.replace('Now','Tani');
+								 });
+							 } 
+						 }
+						 clearInterval(refreshInterval2);
+					 }
+				 }, 10);
 			 }
 			 
 			 
