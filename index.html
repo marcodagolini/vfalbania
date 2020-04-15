@@ -203,6 +203,18 @@
 			 console.log(e);
 			 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
 				 console.log("hooray Visitor");
+				 var refreshInterval;
+				 refreshInterval = setInterval(function(){
+					 if($('.lp_sender').length > 0){
+						 var myClasses = document.getElementsByClassName("lp_sender");
+						 for(var i = 0; i < myClasses.length; i++) {
+							 if(myClasses[i].innerHTML === "You"){
+								 myClasses[i].innerHTML = "Ti";
+							 } 
+						 }
+						 clearInterval(refreshInterval);
+					 }
+				 }, 10);
 			 }
 			 if (e.target.classList.value.indexOf('lpc_message-area_agent') > -1) { 
 				 console.log("hooray Agent");
