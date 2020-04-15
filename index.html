@@ -203,6 +203,19 @@
 		 });
 		 
 		 
+		 window.onbeforeunload = function(){
+			 $(".lpc_maximized-header__menu-button").click()
+			 $(".lp_top_close_action").click()
+			 $(".lpc_confirmation-dialog__confirm-button").click()
+			 
+			 
+			 // return 'Are you sure you want to leave?'
+		 };
+		 
+		 
+		 
+		 
+		 
 		 $(document).on('DOMNodeInserted', function(e) {
 			 console.log(e);
 			 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
