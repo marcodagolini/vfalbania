@@ -69,10 +69,15 @@
 	 
 	 
 	 
-	 function translate(){
+	 function translate(data, eventInfo){
 		 
-		 $('.lp_top-text').text('na mesazhi');
-		 $(".lp_chatting-with-icon").remove();
+		 console.log("data --> " + JSON.stringify(data));
+		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		 
+		 
+		 
+		 // $('.lp_top-text').text('na mesazhi');
+		 // $(".lp_chatting-with-icon").remove();
 		 
 	 }
 
@@ -82,7 +87,6 @@
 	 
 	 function adjust(data, eventInfo){
 		 
-		 translate();
 
 		 if(data.state === "waiting"){
 			 setTimeout(function(){
@@ -115,7 +119,14 @@
 			 func: adjust,
 			 triggerOnce : false
 		 });
-		 // sendLocation();
+		 
+		 
+		 lpTag.events.bind({
+			 eventName : "*",
+			 appName : "lpUnifiedWindow",
+			 func: translate,
+			 triggerOnce : false
+		 });
 	 }
 	 
 
