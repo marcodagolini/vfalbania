@@ -214,6 +214,11 @@
 						 for(var i = 0; i < myClasses.length; i++) {
 							 if(myClasses[i].innerHTML === "You"){
 								 myClasses[i].innerHTML = "Ti";
+								 $('.lp_time').contents().filter(function() {
+									 return this.nodeType == 3
+								 }).each(function(){
+									 this.textContent = this.textContent.replace('Now','Tani');
+								 });
 							 } 
 						 }
 						 clearInterval(refreshInterval);
