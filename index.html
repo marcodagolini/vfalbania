@@ -79,6 +79,29 @@
 		 console.log("**********");
 		 console.log("**********");
 		 
+		 if(data.state === "init"){
+			 
+			 var refreshIntervalId1;
+			 refreshIntervalId1 = setInterval(function(){
+				 
+				 if($('.lp_top-text').length > 0){
+					 $('.lp_top-text').text('na mesazhi');
+					 clearInterval(refreshIntervalId1);
+				 }
+				 
+				 
+				 
+				 
+			 
+			 
+			 
+			 }, 100);
+			 
+			 
+			 
+			 
+		 }
+		 
 		 
 		 
 		 // $('.lp_top-text').text('na mesazhi');
@@ -127,7 +150,7 @@
 		 
 		 
 		 lpTag.events.bind({
-			 eventName : "*",
+			 eventName : "state",
 			 appName : "lpUnifiedWindow",
 			 func: translate,
 			 triggerOnce : false
