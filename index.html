@@ -65,17 +65,21 @@
 
 	
  
-	 
-	 
-	 
-	 
-	 function translate(data, eventInfo){
+	 function newMessage(data, eventInfo){
 		 
 		 console.log("data --> " + JSON.stringify(data));
 		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
 		 console.log("**********");
 		 console.log("**********");
 		 console.log("**********");
+		 
+	 }
+	 
+	 
+	 
+	 function translate(data, eventInfo){
+		 
+		
 		 
 		 if(data.state === "init"){
 			 
@@ -177,6 +181,16 @@
 			 func: translate,
 			 triggerOnce : false
 		 });
+		 
+		 
+		 lpTag.events.bind({
+			 eventName : "*",
+			 appName : "*",
+			 func: newMessage,
+			 triggerOnce : false
+		 });
+		 
+		 
 	 }
 	 
 
