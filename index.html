@@ -283,13 +283,21 @@
 			 }, 10);
 				 
 				 var refreshIntervalId5;
+				 var millisecCounter = 0
 			 refreshIntervalId5 = setInterval(function(){
+				 
+				 millisecCounter = millisecCounter + 10;
+				 if(millisecCounter > 3000){
+					 clearInterval(refreshIntervalId5);
+				 }
+				 
+				 
 				 if($('.lp_title').length > 0){
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
 						 if(myClosure[i].innerHTML === "End conversation"){
 							 myClosure[i].innerHTML = "Mbyll biseden";
-							 clearInterval(refreshIntervalId5);
+							 
 						 } 
 					 }
 					 
