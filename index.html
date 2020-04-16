@@ -133,6 +133,8 @@
 			 
 			 *****/
 			 
+			 /****
+			 
 			 var refreshIntervalId5;
 			 refreshIntervalId5 = setInterval(function(){
 				 if($('.lp_title').length > 0){
@@ -146,6 +148,8 @@
 					 
 				 }
 			 }, 10);
+			 
+			 *****/
 			 
 			 
 			 
@@ -274,6 +278,20 @@
 					 $('.lp_top-text').text('na mesazhi');
 					 $(".lp_chatting-with-icon").remove();
 					 clearInterval(refreshIntervalId1);
+				 }
+			 }, 10);
+				 
+				 var refreshIntervalId5;
+			 refreshIntervalId5 = setInterval(function(){
+				 if($('.lp_title').length > 0){
+					 var myClosure = document.getElementsByClassName("lp_title");
+					 for(var i = 0; i < myClosure.length; i++) {
+						 if(myClosure[i].innerHTML === "End conversation"){
+							 myClosure[i].innerHTML = "Mbyll biseden";
+							 clearInterval(refreshIntervalId5);
+						 } 
+					 }
+					 
 				 }
 			 }, 10);
 				 
