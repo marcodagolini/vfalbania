@@ -252,6 +252,22 @@
 						 clearInterval(refreshInterval);
 					 }
 				 }, 10);
+				 
+				 var refreshIntervalId2;
+				 var millisecCounterTextBox1 = 0
+				 millisecCounterTextBox1 = millisecCounterTextBox1 + 10;
+				 if(millisecCounterTextBox1 > 3000){
+					 clearInterval(refreshIntervalId2);
+				 }
+			 refreshIntervalId2 = setInterval(function(){
+				 if($('.lpview_form_textarea').length > 0){
+					 if($(".lpview_form_textarea").attr("placeholder")){
+						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
+						 clearInterval(refreshIntervalId2);
+					 } 
+				 }
+			 }, 10);
+				 
 			 }
 			 if (e.target.classList.value.indexOf('lpc_message-area_agent') > -1) { 
 				 console.log("hooray Agent");
@@ -273,20 +289,7 @@
 					 }
 				 }, 10);
 				 
-				 var refreshIntervalId2;
-				 var millisecCounter = 0
-				 millisecCounter = millisecCounter + 10;
-				 if(millisecCounter > 3000){
-					 clearInterval(refreshIntervalId2);
-				 }
-			 refreshIntervalId2 = setInterval(function(){
-				 if($('.lpview_form_textarea').length > 0){
-					 if($(".lpview_form_textarea").attr("placeholder")){
-						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
-						 clearInterval(refreshIntervalId2);
-					 } 
-				 }
-			 }, 10);
+				 
 				 
 			 }
 			 
@@ -320,6 +323,21 @@
 						 } 
 					 }
 					 
+				 }
+			 }, 10);
+				 
+				 var refreshIntervalId2;
+				 var millisecCounterTextBox1 = 0
+				 millisecCounterTextBox1 = millisecCounterTextBox1 + 10;
+				 if(millisecCounterTextBox1 > 3000){
+					 clearInterval(refreshIntervalId2);
+				 }
+			 refreshIntervalId2 = setInterval(function(){
+				 if($('.lpview_form_textarea').length > 0){
+					 if($(".lpview_form_textarea").attr("placeholder")){
+						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
+						 clearInterval(refreshIntervalId2);
+					 } 
 				 }
 			 }, 10);
 				 
