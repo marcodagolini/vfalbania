@@ -288,7 +288,9 @@
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
 						 if(myClosure[i].innerHTML === "End conversation"){
-							 myClosure[i].innerHTML = "Mbyll biseden";
+							 setTimeout(function(){
+								 myClosure[i].innerHTML = "Mbyll biseden";
+							 }, 100);
 							 clearInterval(refreshIntervalId5);
 						 } 
 					 }
