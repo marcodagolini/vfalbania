@@ -289,10 +289,7 @@
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
 						 if(myClosure[i].innerHTML === "End conversation"){
-							 var m = i;
-							 setTimeout(function(){
-								 myClosure[m].innerHTML = "Mbyll biseden";
-							 }, 100);
+							 myClosure[i].innerHTML = "Mbyll biseden";
 							 clearInterval(refreshIntervalId5);
 						 } 
 					 }
