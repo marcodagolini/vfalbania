@@ -288,7 +288,7 @@
 				 if($('.lp_title').length > 0){
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
-						 if(myClosure[i].innerHTML === "End conversation"){
+						 if((myClosure[i].innerHTML === "End conversation") || (myClosure[i].innerHTML === "title")){
 							 myClosure[i].innerHTML = "Mbyll biseden";
 							 clearInterval(refreshIntervalId5);
 						 } 
