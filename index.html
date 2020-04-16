@@ -347,11 +347,11 @@
 				 
 				 
 				 var refreshIntervalClosure;
-				 var millisecCounter = 0
+				 var millisecCounterClosure = 0
 			 refreshIntervalClosure = setInterval(function(){
 				 
-				 millisecCounter = millisecCounter + 10;
-				 if(millisecCounter > 3000){
+				 millisecCounterClosure = millisecCounterClosure + 10;
+				 if(millisecCounterClosure > 3000){
 					 clearInterval(refreshIntervalClosure);
 				 }
 				 
