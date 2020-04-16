@@ -204,15 +204,12 @@
 		 
 		 
 		 window.onbeforeunload = function(){
-			 $(".lpc_maximized-header__menu-button").click()
+			 // $(".lpc_maximized-header__menu-button").click()
 			 $(".lp_top_close_action").click()
-			 setTimeout(function(){
-				 $(".lpc_confirmation-dialog__confirm-button").click()
-			 }, 50);
-			 
-			 setTimeout(function(){
+			 $(".lpc_confirmation-dialog__confirm-button").click()
+
 			 return null;
-				 }, 3000);
+
 		 };
 		 
 		 
