@@ -347,17 +347,43 @@
 			 if (e.target.classList.value.indexOf('lpc_confirmation-dialog') > -1) {
 				 console.log("hooray Closure");
 				 
-				 /*****
-				 var refreshIntervalId2;
-			 refreshIntervalId2 = setInterval(function(){
-				 if($('.lpview_form_textarea').length > 0){
-					 if($(".lpview_form_textarea").attr("placeholder")){
-						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
-						 clearInterval(refreshIntervalId2);
-					 } 
+				 lpc_confirmation-dialog__title 
+				 
+				 var refreshIntervalClosure;
+				 var millisecCounter = 0
+			 refreshIntervalClosure = setInterval(function(){
+				 
+				 millisecCounter = millisecCounter + 10;
+				 if(millisecCounter > 3000){
+					 clearInterval(refreshIntervalClosure);
+				 }
+				 
+				 
+				 if($('.lpc_confirmation-dialog__title').length > 0){
+					 var myClosure = document.getElementsByClassName("lpc_confirmation-dialog__title");
+					 for(var i = 0; i < myClosure.length; i++) {
+						  myClosure[i].innerHTML = "A jeni i sigurt që doni të përfundoni bisedën?";
+					 }
+					 
+				 }
+				 
+				 
+				 if($('.lpc_confirmation-dialog__cancel-button').length > 0){
+					 var myClosure = document.getElementsByClassName("lpc_confirmation-dialog__cancel-button");
+					 for(var i = 0; i < myClosure.length; i++) {
+						  myClosure[i].innerHTML = "Jo";
+					 }
+					 
+				 }
+				 
+				 if($('.lpc_confirmation-dialog__confirm-button').length > 0){
+					 var myClosure = document.getElementsByClassName("lpc_confirmation-dialog__confirm-button");
+					 for(var i = 0; i < myClosure.length; i++) {
+						  myClosure[i].innerHTML = "Po";
+					 }
+					 
 				 }
 			 }, 10);
-			 ******/
 				 
 			 }
 			 
