@@ -267,6 +267,16 @@
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 					 } 
 				 }
+				 if($('.lp_title').length > 0){
+					 var myClosure = document.getElementsByClassName("lp_title");
+					 for(var i = 0; i < myClosure.length; i++) {
+						 if(myClosure[i].innerHTML === "End conversation"){
+							 myClosure[i].innerHTML = "Mbyll biseden";
+							 
+						 } 
+					 }
+					 
+				 }
 			 }, 10);
 				 
 			 }
