@@ -5,8 +5,14 @@
 	
 <style>
 
-.startChat {
-    background-color: #4D4F72;
+.header_text_lp{
+   float: left;
+   margin: 10px;
+   color: white;
+}
+
+.startChat_lp {
+    background-color: red;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -17,68 +23,68 @@
     margin: 4px 4px;
     cursor: pointer;
 	  border-radius: 4px;
-	  -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
 	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
     position: absolute;
     bottom:5px;
-    right: 50px;
+    right: 60px;
     margin: 20px 20px;
 
 }
-.startChat:hover {
-    background-color: #060837;
+.startChat_lp:hover {
+    background-color: #cf0000;
     color: white;	
 }
 
-.startChat:disabled,
-.startChat[disabled]{
-  background-color: #AAB5B2;
+.startChat_lp:disabled,
+.startChat_lp[disabled]{
+  background-color: #ff8a8a;
   opacity: 0.5;
 }
 	
-.showContainer {
+.showContainer_lp {
   background:url(https://www.vodafone.al/ext_files/TOBi/icon_shadow.png) no-repeat;
   background-size: cover;
   width: 100px;
   height: 100px;
   position: relative;
-  left:40px;
-  top: 40px;
 }
 
-.engagement{
+.engagement_lp{
   right:0px;
   bottom: 0px;
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 220px;
   position:absolute;
 
 }
 
-.disclaimer{
+.disclaimer_lp{
   position: relative;
   width: 200px;
   height: 200px;
 }
 
-.container_disclaimer{
+.container_disclaimer_lp{
   visibility:hidden;
-  background-color: white;
+  background-color: #f2f2f2;
   position: absolute;
   top: 0px;
   width: 300px;
   height: 200px;
+  box-shadow: 6px 6px #e1e0e0;
+  border: 1px solid;
+  border-radius: 10px;
 }
 
-.header_disclaimer{
-  background:url(https://res.cloudinary.com/djtjkiytu/image/upload/v1587999362/Screenshot_2020-04-27_at_16.40.20.png) no-repeat;
+.header_disclaimer_lp{
+  background-color: red;
   background-size: cover;
   position: relative;
   width:300px;
   height: 40px;
+  border-radius: 10px 10px 0px 0px;
 }
-
+	
 
 </style>
 	
@@ -281,17 +287,22 @@
 	 function offeredOrNot(){
 		 
 		 
-		 $("#showContainer").click(function(){
-			  $(".showContainer").css("visibility","hidden");
-			  $(".container_disclaimer").css("visibility","visible");
+		 $("#showContainer_lp").click(function(){
+			  $(".showContainer_lp").css("visibility","hidden");
+			  $(".container_disclaimer_lp").css("visibility","visible");
 		  });
 		  
-		  $('#accept').mousedown(function() {
+		  $('#accept_lp').mousedown(function() {
 			  if (!$(this).is(':checked')) {
-				  $("#startChat").prop( "disabled", false );
+				  $("#startChat_lp").prop( "disabled", false );
 			  } else{
-				  $("#startChat").prop( "disabled", true );
+				  $("#startChat_lp").prop( "disabled", true );
 			  }
+		  });
+		  
+		  $("#closeDisclaimer_lp").click(function(){
+			  $(".showContainer_lp").css("visibility","visible");
+			  $(".container_disclaimer_lp").css("visibility","hidden");
 		  });
 		 
 		 
