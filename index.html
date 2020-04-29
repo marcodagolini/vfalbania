@@ -297,8 +297,7 @@
 			  $(".container_disclaimer_lp").css("visibility","visible");
 		  });
 		  
-		 $("#accept_lp"). prop("checked", false);
-		  $(document).on("change", "input[id='accept_lp']", function () {
+		  $("#accept_lp").mouseup(function() {
 			  if (!$(this).is(':checked')) {
 				  $("#startChat_lp").prop( "disabled", false );
 			  } else{
