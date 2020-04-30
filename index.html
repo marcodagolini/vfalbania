@@ -293,9 +293,7 @@
 	 
 	 function offeredOrNot(){
 		 
-		 // var svg = document.getElementById("startChat_lp");
-		 // svg.removeAttributeNS(null, 'data-LP-event', 'click');
-		 // svg.removeAttributeNS(null, 'data-lp-event', 'click');
+		 $("#startChat_lp").suspendEvents();
 		 
 		 $("#showContainer_lp").click(function(){
 			  $(".showContainer_lp").css("visibility","hidden");
@@ -305,11 +303,11 @@
 		  $("#accept_lp").mouseup(function() {
 			  if (!$(this).is(':checked')) {
 				  $("#startChat_lp").prop( "disabled", false );
-				  var svg = document.getElementById("startChat_lp");
-				  svg.setAttributeNS(null, 'data-LP-event', 'click');
+				  $("#startChat_lp").resumeEvents();
+				  
 			  } else{
 				  $("#startChat_lp").prop( "disabled", true );
-				  
+				  $("#startChat_lp").suspendEvents();
 			  }
 		  });
 		  
@@ -327,6 +325,42 @@
 	 
 	 
 	 window.onload = function() {
+		 
+		 
+		 $.fn.preBind = function (type, data, fn) {
+    this.each(function () {
+        var $this = $(this);
+
+        $this.bind(type, data, fn);
+
+        $.each(type.split(/ +/), function () {
+            var currentBindings = $this.data('events')[this];
+            if ($.isArray(currentBindings)) {
+                currentBindings.unshift(currentBindings.pop());
+            }
+        });
+    });
+    return this;
+};
+
+$.fn.suspendEvents = function () {
+    this.preBind("click keydown keyup keypress mouseover mouseenter  mouseout mouseleave mousedown mouseup mousemove change blur focus focusin focusout scroll resize load unload beforeunload", null, blockEvents);
+}
+
+$.fn.resumeEvents = function () {
+    var _this = this;
+    $.each("click keydown keyup keypress mouseover mouseenter  mouseout mouseleave mousedown mouseup mousemove change blur focus focusin focusout scroll resize load unload beforeunload".split(/ +/), function () {
+        _this.unbind(this, blockEvents);
+    });
+}
+
+function blockEvents(e) {
+    e.stopImmediatePropagation();
+}
+		 
+		 
+		 
+		 
 		 
 		 lpTag.events.bind({
 			 eventName : "state",
