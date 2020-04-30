@@ -297,8 +297,10 @@
 		  $("#accept_lp").mouseup(function() {
 			  if (!$(this).is(':checked')) {
 				  $("#startChat_lp").prop( "disabled", false );
+				  $("#startChat_lp").attr('data-lp-event', 'click');
 			  } else{
 				  $("#startChat_lp").prop( "disabled", true );
+				  $("#startChat_lp").removeAttr('data-lp-event', 'click');
 			  }
 		  });
 		  
