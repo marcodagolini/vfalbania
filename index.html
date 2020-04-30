@@ -293,6 +293,8 @@
 	 
 	 function offeredOrNot(){
 		 
+		 var svg = document.getElementById("startChat_lp");
+		 svg.removeAttributeNS(null, 'data-LP-event', 'click');
 		 
 		 $("#showContainer_lp").click(function(){
 			  $(".showContainer_lp").css("visibility","hidden");
@@ -306,8 +308,7 @@
 				  svg.setAttributeNS(null, 'data-LP-event', 'click');
 			  } else{
 				  $("#startChat_lp").prop( "disabled", true );
-				  var svg = document.getElementById("startChat_lp");
-				  svg.removeAttributeNS(null, 'data-LP-event', 'click');
+				  
 			  }
 		  });
 		  
