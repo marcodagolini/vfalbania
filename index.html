@@ -299,10 +299,12 @@
 		  $("#accept_lp").mouseup(function() {
 			  if (!$(this).is(':checked')) {
 				  $("#startChat_lp").prop( "disabled", false );
-				  $("#startChat_lp").attr('data-LP-event', 'click');
+				  var svg = document.getElementById("startChat_lp")[0];
+				  svg.setAttribute('data-LP-event', 'click');
 			  } else{
 				  $("#startChat_lp").prop( "disabled", true );
-				  $("#startChat_lp").removeAttr('data-LP-event', 'click');
+				  var svg = document.getElementById("startChat_lp")[0];
+				  svg.removeAttribute('data-LP-event', 'click');
 			  }
 		  });
 		  
