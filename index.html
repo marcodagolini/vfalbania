@@ -1,7 +1,7 @@
 <html>
 	
 
-	
+
 	
 	
 <style>
@@ -512,8 +512,9 @@
 								 $(".lp_top-text")[q].innerHTML = "Faleminderit";
 							 }
 						 }
-						 document.getElementsByClassName('lp_cancel_button')[0].innerHTML = "Jo";
-						 document.getElementsByClassName('lp_confirm_button')[0].innerHTML = "Po";
+						 $(".lp_survey_disclaimer")[0].innerHTML = "Vlerësimi yt na ndihmon të përmirësohemi";
+						 $(".lpc_survey-area__cancel-button")[0].innerHTML = "Fshij"
+						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
 						 clearInterval(refreshIntervalMySurvey1); 
 					 }
 					 millisecsSurvey = millisecsSurvey + 10;
