@@ -476,12 +476,10 @@
 				 }
 			 }, 10);
 				 
-				 var refreshIntervalTextBox2;
-				 var millisecCounterTextBox2 = 0
-				 millisecCounterTextBox2 = millisecCounterTextBox2 + 10;
-				 if(millisecCounterTextBox2 > 3000){
-					 clearInterval(refreshIntervalTextBox2);
-				 }
+			var refreshIntervalTextBox2;
+			var millisecCounterTextBox2 = 0
+				 
+				 
 			 refreshIntervalTextBox2 = setInterval(function(){
 				 if($('.lpview_form_textarea').length > 0){
 					 if($(".lpview_form_textarea").attr("placeholder")){
@@ -489,7 +487,12 @@
 						 $('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
 						 $(".lp_input_area").css("left","10px");
+						 clearInterval(refreshIntervalTextBox2);
 					 } 
+				 }
+				 millisecCounterTextBox2 = millisecCounterTextBox2 + 10;
+				 if(millisecCounterTextBox2 > 3000){
+					 clearInterval(refreshIntervalTextBox2);
 				 }
 			 }, 10);
 				 
