@@ -536,6 +536,27 @@
 						 document.getElementById('dialog_title').innerHTML = "Dëshiron të përfundosh bisedën?";
 						 document.getElementsByClassName('lp_cancel_button')[0].innerHTML = "Jo";
 						 document.getElementsByClassName('lp_confirm_button')[0].innerHTML = "Po";
+						 
+						 $(".lpc_confirmation-dialog__confirm-button").click(function(){
+							 var refreshIntervalMyButtonClosure;
+							 refreshIntervalMyButtonClosure = setInterval(function(){
+								 if($('.lp_top-text').length > 0){
+									 var myTopLabelLength = $(".lp_top-text").length;
+									 for(var s = 0; s < myTopLabelLength; s++){
+										 if($(".lp_top-text")[s].innerHTML === "Thank you"){
+											 $(".lp_top-text")[s].innerHTML = "Faleminderit";
+										 }
+									 }
+									 clearInterval(refreshIntervalMyButtonClosure); 
+								 }
+								 
+								 
+								 
+							 }, 10);
+						 });
+						 
+						 
+						 
 						 clearInterval(refreshIntervalMyClosure1); 
 					 }
 					 millisecs1 = millisecs1 + 10;
