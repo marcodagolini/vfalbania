@@ -516,27 +516,6 @@
 					 millisecs1 = millisecs1 + 10;
 				 }, 10);
 				 
-				 var refreshIntervalMyClosure2;
-				 var millisecs2 = 0;
-				 refreshIntervalMyClosure2 = setInterval(function(){
-					 if($('.lp_cancel_button').length > 0){
-						 console.log("millisecs2 --> " + millisecs2);
-						 document.getElementsByClassName('lp_cancel_button')[0].innerHTML = "Jo";
-						 clearInterval(refreshIntervalMyClosure2); 
-					 }
-					 millisecs2 = millisecs2 + 10;
-				 }, 10);
-				 
-				 var refreshIntervalMyClosure3;
-				 var millisecs3 = 0;
-				 refreshIntervalMyClosure3 = setInterval(function(){
-					 if($('.lp_confirm_button').length > 0){
-						 console.log("millisecs3 --> " + millisecs3);
-						 document.getElementsByClassName('lp_confirm_button')[0].innerHTML = "Po";
-						 clearInterval(refreshIntervalMyClosure3); 
-					 }
-					 millisecs3 = millisecs3 + 10;
-				 }, 10);
 				 
 
 				 
