@@ -496,7 +496,12 @@
 				 
 			 }
 			 
-			 console.log(e.currentTarget.activeElement.className);
+			 
+			 if (e.target.classList.value.indexOf('lp_survey_area') > -1) {
+				 console.log("Survey!!");
+			 }
+			 
+			 // console.log(e.currentTarget.activeElement.className);
 			 if (e.currentTarget.activeElement.className.indexOf('lpc_maximized-header__close-button') > -1) {
 				 console.log("hooray Closure");
 				 
