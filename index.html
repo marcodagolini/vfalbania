@@ -500,8 +500,19 @@
 			 if (e.currentTarget.activeElement.className.indexOf('lpc_maximized-header__close-button') > -1) {
 				 console.log("hooray Closure");
 				 
-				 var myID = document.getElementById("dialog_title");
-				 myID.innerHTML = "Dëshiron të përfundosh bisedën?";
+				 
+				 var refreshIntervalMyClosure1;
+				 var millisecs1 = 0;
+				 refreshIntervalMyClosure1 = setInterval(function(){
+					 if($('#dialog_title').length > 0){
+						 console.log("millisecs1 --> " + millisecs1);
+						 document.getElementById('dialog_title').innerHTML = "Dëshiron të përfundosh bisedën?";
+						 clearInterval(refreshIntervalMyClosure1); 
+					 }
+					 millisecs1 = millisecs1 + 10;
+				 }, 10);
+				 
+
 				 
 				/****
 				 
