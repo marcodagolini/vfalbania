@@ -525,8 +525,10 @@
 						 $(".lp_survey_disclaimer")[0].innerHTML = "Vlerësimi yt na ndihmon të përmirësohemi";
 						 $(".lpc_survey-area__cancel-button")[0].innerHTML = "Fshij"
 						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
-						 /*****
-						 $('body').on('DOMSubtreeModified', '.lp_csat_rater_current_rating', function(e){
+						 
+						 $('body').on('DOMSubtreeModified', '.lp_csat_rater_current_rating', function(){
+							 
+							 /*****
 							 var mySurveyValue = document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML;
 							 var myNewSurveyValue;
 							 switch (mySurveyValue) {
@@ -552,11 +554,13 @@
 							 }
 									 
 							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = myNewSurveyValue;
+							  *****/
+							 console.log("in");
 
 
 						 });
 						 
-						 *****/
+						
 						 
 						 
 						 clearInterval(refreshIntervalMySurvey1); 
