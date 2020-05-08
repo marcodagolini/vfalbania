@@ -526,11 +526,33 @@
 						 $(".lpc_survey-area__cancel-button")[0].innerHTML = "Fshij"
 						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
 						 $('body').on('DOMSubtreeModified', '.lp_csat_rater_current_rating', function(e){
-							 console.log("change!!!!!!!!");
-							 console.log(e);
-							 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
-								 
+							 var mySurveyValue = document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML;
+							 var myNewSurveyValue;
+							 switch (mySurveyValue) {
+									 case "Very dissatisfied":
+									 myNewSurveyValue = "Shumë i/e pakënaqur"
+									 break;
+									 
+									 case "Dissatisfied":
+									 myNewSurveyValue = "I/E pakënaqur"
+									 break;
+									 
+									 case "Neutral":
+									 myNewSurveyValue = "Neutral"
+									 break;
+									 
+									 case "Satisfied":
+									 myNewSurveyValue = "I/E kënaqur"
+									 break;
+									 
+									 case "Very Satisfied":
+									 myNewSurveyValue = "Shumë i/e kënaqur"
+									 break;
 							 }
+									 
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = myNewSurveyValue;
+
+
 						 });
 						 clearInterval(refreshIntervalMySurvey1); 
 					 }
