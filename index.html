@@ -527,6 +527,22 @@
 						 $(".lpc_survey-area__cancel-button")[0].innerHTML = "Fshij"
 						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
 						 
+						 $("a[data-lp-rating='1']").click(function(e){
+							 console.log("1");
+						 });
+						 $("a[data-lp-rating='2']").click(function(e){
+							 console.log("2");
+						 });
+						 $("a[data-lp-rating='3']").click(function(e){
+							 console.log("3");
+						 });
+						 $("a[data-lp-rating='4']").click(function(e){
+							 console.log("4");
+						 });
+						 $("a[data-lp-rating='5']").click(function(e){
+							 console.log("5");
+						 });
+						 
 						 $('body').on('DOMSubtreeModified', '.lp_csat_rater_current_rating', function(){
 							 
 							 /*****
