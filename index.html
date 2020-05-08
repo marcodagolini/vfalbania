@@ -529,57 +529,22 @@
 						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
 						 
 						 $("a[data-lp-rating='1']").click(function(e){
-							 console.log("1");
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Shumë i/e pakënaqur";
 						 });
 						 $("a[data-lp-rating='2']").click(function(e){
-							 console.log("2");
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "I/E pakënaqur";
 						 });
 						 $("a[data-lp-rating='3']").click(function(e){
-							 console.log("3");
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Neutral";
 						 });
 						 $("a[data-lp-rating='4']").click(function(e){
-							 console.log("4");
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "I/E kënaqur";
 						 });
 						 $("a[data-lp-rating='5']").click(function(e){
-							 console.log("5");
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Shumë i/e kënaqur";
 						 });
 						 
-						 $('body').on('DOMSubtreeModified', '.lp_csat_rater_current_rating', function(){
-							 
-							 /*****
-							 var mySurveyValue = document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML;
-							 var myNewSurveyValue;
-							 switch (mySurveyValue) {
-									 case "Very dissatisfied":
-									 myNewSurveyValue = "Shumë i/e pakënaqur"
-									 break;
-									 
-									 case "Dissatisfied":
-									 myNewSurveyValue = "I/E pakënaqur"
-									 break;
-									 
-									 case "Neutral":
-									 myNewSurveyValue = "Neutral"
-									 break;
-									 
-									 case "Satisfied":
-									 myNewSurveyValue = "I/E kënaqur"
-									 break;
-									 
-									 case "Very Satisfied":
-									 myNewSurveyValue = "Shumë i/e kënaqur"
-									 break;
-							 }
-									 
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = myNewSurveyValue;
-							  *****/
-							 console.log("in");
 
-
-						 });
-						 
-						
-						 
 						 
 						 clearInterval(refreshIntervalMySurvey1); 
 					 }
