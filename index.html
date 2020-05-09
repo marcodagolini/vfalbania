@@ -329,6 +329,15 @@
 		 
 	 }
 	 
+	 function consolinglog(data, eventInfo){
+		 console.log("******* <----> ********");
+		 console.log("******* <----> ********");
+		 console.log("data --> " + data);
+		 console.log("eventInfo --> " + eventInfo);
+		 console.log("******* <----> ********");
+		 console.log("******* <----> ********");
+	 }
+	 
 	 
 	 
 	 
@@ -356,6 +365,15 @@
 			 eventName : "OFFER_IMPRESSION",
 			 appName : "LP_OFFERS",
 			 func: offeredOrNot,
+			 triggerOnce : false
+
+		 });
+		 
+		 
+		 lpTag.events.bind({
+			 eventName : "*",
+			 appName : "*",
+			 func: consolinglog,
 			 triggerOnce : false
 
 		 });
