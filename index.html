@@ -358,18 +358,17 @@
 				 ****/
 			 });
 		 });
-		 var config = { childList: true, subtree:true };
-		 observer.observe(document, config);
+		 // var config = { childList: true, subtree:true };
+		 // observer.observe(document, config);
 		 
-		 /****
-		 observer.observe(document, {
-    attributes: true,
-    childList: true,
-    characterData: true,
-    subtree:true
-});
 
-*****/
+		 observer.observe(document, {
+			 attributes: true,
+			 childList: true,
+			 characterData: true,
+			 subtree:true
+		 });
+
 		 
 
 		 
