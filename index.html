@@ -536,7 +536,7 @@
 				 refreshIntervalMySurvey1 = setInterval(function(){
 					 if($('#dialog_title').length > 0){
 						 console.log("millisecs1 --> " + millisecsSurvey);
-						 document.getElementsByClassName("lpc_survey-area__question-label")[0].innerHTML = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
+						 document.getElementsByClassName("lpc_survey-area__question-label")[0].textContent = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
 						 var mySurveyLabelLength = $(".lp_top-text").length;
 						 for(var q = 0; q < mySurveyLabelLength; q++){
 							 if($(".lp_top-text")[q].textContent === "Thank you"){
