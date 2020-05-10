@@ -347,6 +347,13 @@
 				
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
+
+					 var myLoader = document.getElementsByClassName("lp_top-text");
+					 var myLoaderLength = myLoader.length;
+					 for (var a = 0; a < myLoaderLength; a++){
+						 myLoader[a].textContent = "Ne ngarkim";
+					 }
+					 
 					 console.log("yes!! This is a test!")
 				 }
 				 
