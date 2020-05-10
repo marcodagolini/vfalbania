@@ -359,7 +359,8 @@
 					 console.log("yes!! This is a test!")
 				 }
 				 
-				 if(mutation.target.className === "lp_main"){
+				 
+				 if(mutation.target.className.indexOf("LPMcontainer") > -1){
 					 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
