@@ -338,6 +338,9 @@
 		 
 		 var observer = new window.MutationObserver(function (mutations) {
 			 console.log(mutations);
+			 if (mutations.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
+				 console.log("yes!! This is a Visitor!")
+			 }
 		 });
 		 var config = { childList: true, subtree:true };
 		 observer.observe(document, config);
