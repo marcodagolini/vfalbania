@@ -341,7 +341,7 @@
 			 mutations.forEach(function(mutation) {
 				 // console.log(mutation);
 				 var myLength = mutation.target.children.length -1;
-				 console.log(mutation.target.children[myLength]);
+				 console.log(mutation.addedNodes[0]);
 				 if(mutation.addedNodes[0].className.indexOf('lpc_message-area_agent') > -1){
 					 console.log("yes!! This is a Agent!")
 				 }
