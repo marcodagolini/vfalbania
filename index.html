@@ -340,7 +340,9 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 
 			 mutations.forEach(function(mutation) {
-				 console.log(mutation);
+				 // console.log(mutation);
+				 var myLength = mutation.target.children.length -1;
+				 console.log(mutation.target.children[myLength];)
 				 if (mutation.target.classList.value.indexOf('lpc_message-area__indicator_visitor') > -1) { 
 					 console.log("yes!! This is a Visitor!")
 				 }
