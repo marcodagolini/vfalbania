@@ -409,20 +409,18 @@
 				 
 				 var refreshIntervalId2;
 				 var millisecCounterTextBox1 = 0
-				 millisecCounterTextBox1 = millisecCounterTextBox1 + 10;
-				 if(millisecCounterTextBox1 > 3000){
-					 clearInterval(refreshIntervalId2);
-				 }
+				 
 			 refreshIntervalId2 = setInterval(function(){
+				 
 				 if($('.lpview_form_textarea').length > 0){
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 						 
-						 var node = document.getElementsByClassName("lp_actions_button")[0];
-						 node.parentNode.removeChild(node);
-						 
+						 if(document.getElementsByClassName("lp_actions_button").length > 0){
+							var node = document.getElementsByClassName("lp_actions_button")[0];
+							node.parentNode.removeChild(node);
+						 }
 
-						 
 						 // $('.lp_bottom_area').removeChild($(".lp_actions_button")); // $(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
 						 $(".lp_input_area").css("left","10px");
@@ -437,6 +435,10 @@
 						 } 
 					 }
 					 
+				 }
+				 millisecCounterTextBox1 = millisecCounterTextBox1 + 10;
+				 if(millisecCounterTextBox1 > 3000){
+					 clearInterval(refreshIntervalId2);
 				 }
 			 }, 10);
 				 
@@ -508,8 +510,10 @@
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 						 
-						 var node = document.getElementsByClassName("lp_actions_button")[0];
-						 node.parentNode.removeChild(node);
+						 if(document.getElementsByClassName("lp_actions_button").length > 0){
+							 var node = document.getElementsByClassName("lp_actions_button")[0];
+							 node.parentNode.removeChild(node);
+						 }
 						 
 						 
 						 // $('.lp_bottom_area').removeChild($(".lp_actions_button")); //$(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
