@@ -359,12 +359,15 @@
 				 }
 				 
 				 
-				 if(mutation.target.className.indexOf("LPMcontainer") > -1){
+				 if(mutation.target.className.indexOf("lp_top-text") > -1){
 					 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
 					 for (var a = 0; a < myLoaderLength; a++){
-						 myLoader[a].textContent = "Na shkruaj";
+						 if(myLoader[a].textContent === "Message us"){
+							 myLoader[a].textContent = "Na shkruaj";
+						 }
+						 
 					 }
 					 console.log("yes!! This is lp_main!")
 				 }
