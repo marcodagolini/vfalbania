@@ -374,14 +374,9 @@
 					 console.log("yes!! This is lp_main!")
 				 }
 				 
-				 if(mutation.target.className === "lp_title"){
+				 if(mutation.target.className.indexOf("LPMcontainer") > -1){
 					 
-					 var myLoader = document.getElementsByClassName("lp_top-text");
-					 var myLoaderLength = myLoader.length;
-					 for (var a = 0; a < myLoaderLength; a++){
-						 myLoader[a].textContent = "Na shkruaj";
-					 }
-					 console.log("yes!! This is lp_title!")
+					 console.log("container");
 
 				 }
 				 
