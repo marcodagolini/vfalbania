@@ -356,6 +356,16 @@
 					 console.log("yes!! This is a test!")
 				 }
 				 
+				 if(mutation.target.className.indexOf("lp_main") > -1){
+					 
+					 var myLoader = document.getElementsByClassName("lp_top-text");
+					 var myLoaderLength = myLoader.length;
+					 for (var a = 0; a < myLoaderLength; a++){
+						 myLoader[a].textContent = "Na shkruaj";
+					 }
+					 console.log("yes!! This is lp_main!")
+				 }
+				 
 				 if(mutation.target.className.indexOf("lpc_transcript") > -1){
 					 console.log("yes!! This is a new line!")
 				 }
