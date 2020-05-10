@@ -340,13 +340,18 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 console.log(mutations);
 		 });
-		 var config = { subtree: true };
+		 var config = { childList: true };
+		 observer.observe(document, config);
+		 
+		 /****
 		 observer.observe(document, {
     attributes: true,
     childList: true,
     characterData: true,
     subtree:true
 });
+
+*****/
 		 
 
 		 
