@@ -343,7 +343,7 @@
 				 // console.log(mutation);
 				 // var myLength = mutation.target.children.length -1;
 				 // console.log(mutation.addedNodes[0]);
-				 if(mutation.target.className.indexOf("lp_sender")){
+				 if(mutation.target.className.indexOf("lpc_transcript")){
 					 console.log("yes!! This is a new line!")
 				 }
 				 
@@ -364,9 +364,9 @@
 		 
 
 		 observer.observe(document, {
-			 attributes: true,
+			 // attributes: true,
 			 childList: true,
-			 characterData: true,
+			 // characterData: true,
 			 subtree:true
 		 });
 
