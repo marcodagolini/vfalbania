@@ -337,12 +337,9 @@
 	 
 	 window.onload = function() {
 		 
-		 $(window).on('onreadystatechange', function(e, parent){
+		 var observer = new MutationObserver(function(e) {
 			 console.log(e);
-			 console.log(parent);
-		 
-		 
-		 })
+		 });
 		 
 		 
 		 
