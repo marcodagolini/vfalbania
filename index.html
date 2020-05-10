@@ -416,13 +416,10 @@
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 						 
-						 var isIE = /*@cc_on!@*/false || !!document.documentMode
-						 if (isIE == true) {
-							 var node = document.getElementsByClassName("lp_actions_button")
-							 node.parentNode.removeChild(node);
-						 } else{
-							 // $('.lp_actions_button').remove();
-						 }
+						 var node = document.getElementsByClassName("lp_actions_button")[0];
+						 node.parentNode.removeChild(node);
+						 
+
 						 
 						 // $('.lp_bottom_area').removeChild($(".lp_actions_button")); // $(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
@@ -509,13 +506,9 @@
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
 						 
-						 var isIE = /*@cc_on!@*/false || !!document.documentMode
-						 if (isIE == true) {
-							 var node = document.getElementsByClassName("lp_actions_button")
-							 node.parentNode.removeChild(node);
-						 } else{
-							 // $('.lp_actions_button').remove();
-						 }
+						 var node = document.getElementsByClassName("lp_actions_button")[0];
+						 node.parentNode.removeChild(node);
+						 
 						 
 						 // $('.lp_bottom_area').removeChild($(".lp_actions_button")); //$(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
