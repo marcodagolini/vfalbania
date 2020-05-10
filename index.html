@@ -336,10 +336,13 @@
 	 
 	 window.onload = function() {
 		 
-		 var observer = new MutationObserver(function(e) {
-			 console.log(e);
+		 var observer = new window.MutationObserver(function (mutations) {
+			 console.log(mutations);
 		 });
+		 var config = { childList: true };
+		 observer.observe(window.document, config);
 		 
+
 		 
 		 
 		 lpTag.events.bind({
