@@ -337,6 +337,13 @@
 	 
 	 window.onload = function() {
 		 
+		 $(window).on('customupdatedom', function(e, parent){
+			 console.log(e);
+			 console.log(parent);
+		 
+		 
+		 })
+		 
 		 
 		 
 		 lpTag.events.bind({
@@ -384,7 +391,7 @@
 		 
 		 
 		 jQuery(document).on('DOMNodeInserted', function(e) {
-			 console.log(e);
+			 // console.log(e);
 			 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
 				 console.log("hooray Visitor");
 				 var refreshInterval;
