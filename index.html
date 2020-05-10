@@ -414,7 +414,8 @@
 				 if($('.lpview_form_textarea').length > 0){
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
-						 $(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
+						 
+						 $('body').removeChild($(".lp_actions_button")); // $(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
 						 $(".lp_input_area").css("left","10px");
 					 } 
@@ -498,7 +499,7 @@
 				 if($('.lpview_form_textarea').length > 0){
 					 if($(".lpview_form_textarea").attr("placeholder")){
 						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
-						 $(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
+						 $('body').removeChild($(".lp_actions_button")); //$(".lp_actions_button").eq(0).remove(); //$('.lp_actions_button').remove();
 						 $(".lp_input_area").css("position","absolute");
 						 $(".lp_input_area").css("left","10px");
 						 clearInterval(refreshIntervalTextBox2);
