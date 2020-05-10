@@ -218,7 +218,7 @@
 			 var refreshIntervalId3;
 			 refreshIntervalId3 = setInterval(function(){
 				 if($('#lp_date_line_Today').length > 0){
-					 document.getElementById('lp_date_line_Today').innerHTML = 'Sot';
+					 document.getElementById('lp_date_line_Today').textContent = 'Sot';
 					 clearInterval(refreshIntervalId3);
 				 }
 			 }, 10);
@@ -390,8 +390,8 @@
 					 if($('.lp_sender').length > 0){
 						 var myClasses = document.getElementsByClassName("lp_sender");
 						 for(var i = 0; i < myClasses.length; i++) {
-							 if(myClasses[i].innerHTML === "You"){
-								 myClasses[i].innerHTML = "Ti";
+							 if(myClasses[i].textContent === "You"){
+								 myClasses[i].textContent = "Ti";
 								 $('.lp_time').contents().filter(function() {
 									 return this.nodeType == 3
 								 }).each(function(){
@@ -444,8 +444,8 @@
 					 if($('.lp_sender').length > 0){
 						 var myClasses = document.getElementsByClassName("lp_sender");
 						 for(var i = 0; i < myClasses.length; i++) {
-							 if(myClasses[i].innerHTML === "Agent"){
-								 myClasses[i].innerHTML = "Agjent";
+							 if(myClasses[i].textContent === "Agent"){
+								 myClasses[i].textContent = "Agjent";
 								 $('.lp_time').contents().filter(function() {
 									 return this.nodeType == 3
 								 }).each(function(){
@@ -486,8 +486,8 @@
 				 if($('.lp_title').length > 0){
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
-						 if(myClosure[i].innerHTML === "End conversation"){
-							 myClosure[i].innerHTML = "Mbyll biseden";
+						 if(myClosure[i].textContent === "End conversation"){
+							 myClosure[i].textContent = "Mbyll biseden";
 							 
 						 } 
 					 }
@@ -534,28 +534,28 @@
 						 document.getElementsByClassName("lpc_survey-area__question-label")[0].innerHTML = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
 						 var mySurveyLabelLength = $(".lp_top-text").length;
 						 for(var q = 0; q < mySurveyLabelLength; q++){
-							 if($(".lp_top-text")[q].innerHTML === "Thank you"){
-								 $(".lp_top-text")[q].innerHTML = "Faleminderit";
+							 if($(".lp_top-text")[q].textContent === "Thank you"){
+								 $(".lp_top-text")[q].textContent = "Faleminderit";
 							 }
 						 }
-						 $(".lp_survey_disclaimer")[0].innerHTML = "Vlerësimi yt na ndihmon të përmirësohemi";
-						 $(".lpc_survey-area__cancel-button")[0].innerHTML = "Fshij"
-						 $(".lpc_survey-area__submit-button")[0].innerHTML = "Dërgo"
+						 $(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
+						 $(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
+						 $(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
 						 
 						 $("a[data-lp-rating='1']").click(function(e){
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Shumë i/e pakënaqur";
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e pakënaqur";
 						 });
 						 $("a[data-lp-rating='2']").click(function(e){
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "I/E pakënaqur";
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E pakënaqur";
 						 });
 						 $("a[data-lp-rating='3']").click(function(e){
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Neutral";
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Neutral";
 						 });
 						 $("a[data-lp-rating='4']").click(function(e){
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "I/E kënaqur";
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E kënaqur";
 						 });
 						 $("a[data-lp-rating='5']").click(function(e){
-							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].innerHTML = "Shumë i/e kënaqur";
+							 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
 						 });
 						 
 
@@ -578,9 +578,9 @@
 				 refreshIntervalMyClosure1 = setInterval(function(){
 					 if($('#dialog_title').length > 0){
 						 console.log("millisecs1 --> " + millisecs1);
-						 document.getElementById('dialog_title').innerHTML = "Dëshiron të përfundosh bisedën?";
-						 document.getElementsByClassName('lp_cancel_button')[0].innerHTML = "Jo";
-						 document.getElementsByClassName('lp_confirm_button')[0].innerHTML = "Po";
+						 document.getElementById('dialog_title').textContent = "Dëshiron të përfundosh bisedën?";
+						 document.getElementsByClassName('lp_cancel_button')[0].textContent = "Jo";
+						 document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
 						 
 						 /*****
 						 $(".lpc_confirmation-dialog__confirm-button").click(function(){
