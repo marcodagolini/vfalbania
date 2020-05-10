@@ -339,7 +339,12 @@
 			 console.log(mutations);
 		 });
 		 var config = { subtree: true };
-		 observer.observe(window.document, config);
+		 observer.observe(document, {
+    attributes: true,
+    childList: true,
+    characterData: true,
+    subtree:true
+});
 		 
 
 		 
