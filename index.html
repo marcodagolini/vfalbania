@@ -340,7 +340,7 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 console.log(mutations);
 		 });
-		 var config = { childList: true };
+		 var config = { subtree: true };
 		 observer.observe(window.document, config);
 		 
 
