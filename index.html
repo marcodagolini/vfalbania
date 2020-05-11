@@ -375,6 +375,10 @@
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_top_menu") > -1){
+					 
+					 var node = document.getElementsByClassName("lp_chatting-with-icon")[0];
+					 node.parentNode.removeChild(node);
+					 
 					 console.log("yes!! This is a top menu!")
 				 }
 				 
@@ -626,7 +630,7 @@
 				 var refreshIntervalId1;
 			 refreshIntervalId1 = setInterval(function(){
 				 if(jQuery('.lp_top-text').length > 0){
-					 jQuery('.lp_top-text').text('Na shkruaj');
+					 // jQuery('.lp_top-text').text('Na shkruaj');
 					 // $('.lp_actions_button').remove();
 					 // jQuery(".lp_chatting-with-icon").remove();
 					 clearInterval(refreshIntervalId1);
