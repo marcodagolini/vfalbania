@@ -337,17 +337,31 @@
 						 }
 					 }, 100);
 					 
-					 var myEmoji = document.getElementsByClassName("lp_emoji_button");
-					 var myEmojiLength = myEmoji.length;
-					 for (var a = 0; a < myEmojiLength; a++){
-						myEmoji[a].title = "emoji";
-					 }
+					 var refreshIntervalEmoji;
+					 refreshIntervalEmoji = setInterval(function(){
+						 var myEmoji = document.getElementsByClassName("lp_emoji_button");
+						 var myEmojiLength = myEmoji.length;
+						 if(myEmojiLength > 0){
+							 clearInterval(refreshIntervalEmoji);
+							 for (var a = 0; a < myEmojiLength; a++){
+								 myEmoji[a].title = "emoji";
+							 }
+						 }
+						 
+					 }, 100);
 					 
-					 var mySend = document.getElementsByClassName("lpc_composer__send-button");
-					 var mySendLength = mySend.length;
-					 for (var a = 0; a < mySendLength; a++){
-						mySend[a].title = "sending";
-					 }
+					 var refreshIntervalSend;
+					 refreshIntervalSend = setInterval(function(){
+						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
+						 var mySendLength = mySend.length;
+						 if(mySendLength > 0){
+							clearInterval(refreshIntervalSend);
+							 for (var a = 0; a < mySendLength; a++){
+								 mySend[a].title = "sending";
+							 } 
+						 }
+						 
+					 }, 100); 
 				 
 					 
 					 
