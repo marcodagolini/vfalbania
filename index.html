@@ -336,6 +336,18 @@
 							 clearInterval(refreshIntervalTextBox);
 						 }
 					 }, 100);
+					 
+					 var myEmoji = document.getElementsByClassName("lp_emoji_button");
+					 var myEmojiLength = myEmoji.length;
+					 for (var a = 0; a < myEmojiLength; a++){
+						myEmoji[a].title = "emoji";
+					 }
+					 
+					 var mySend = document.getElementsByClassName("lpc_composer__send-button");
+					 var mySendLength = mySend.length;
+					 for (var a = 0; a < mySendLength; a++){
+						mySend[a].title = "sending";
+					 }
 				 
 					 
 					 
