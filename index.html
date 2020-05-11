@@ -412,6 +412,23 @@
 				 }
 				 
 				 if(mutation.target.className.indexOf("lpc_transcript") > -1){
+					 
+					 var myClasses = document.getElementsByClassName("lp_sender");
+					 for(var i = 0; i < myClasses.length; i++) {
+						 if(myClasses[i].textContent === "Agent"){
+							 myClasses[i].textContent = "Agjent"; 
+						 }
+						 if(myClasses[i].textContent === "You"){
+							 myClasses[i].textContent = "Ti"; 
+						 }
+						 jQuery('.lp_time').contents().filter(function() {
+							 return this.nodeType == 3
+						 }).each(function(){
+							 this.textContent = this.textContent.replace('Now','Tani');
+						 });
+					 }
+					 
+					 
 					 console.log("yes!! This is a new line!")
 				 }
 				 
@@ -544,6 +561,7 @@
 			 // console.log(e);
 			 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
 				 console.log("hooray Visitor");
+				 /******
 				 var refreshInterval;
 				 refreshInterval = setInterval(function(){
 					 if(jQuery('.lp_sender').length > 0){
@@ -561,6 +579,8 @@
 						 clearInterval(refreshInterval);
 					 }
 				 }, 10);
+				 
+				 *****/
 				 
 				 var refreshIntervalId2;
 				 var millisecCounterTextBox1 = 0
@@ -592,7 +612,7 @@
 					 var myClosure = document.getElementsByClassName("lp_title");
 					 for(var i = 0; i < myClosure.length; i++) {
 						 if(myClosure[i].textContent === "End conversation"){
-							 myClosure[i].textContent = "Mbyll biseden";
+							//  myClosure[i].textContent = "Mbyll biseden";
 							 
 						 } 
 					 }
@@ -607,6 +627,7 @@
 			 }
 			 if (e.target.classList.value.indexOf('lpc_message-area_agent') > -1) { 
 				 console.log("hooray Agent");
+				 /****
 				 var refreshInterval2;
 				 refreshInterval2 = setInterval(function(){
 					 if(jQuery('.lp_sender').length > 0){
@@ -624,6 +645,8 @@
 						 clearInterval(refreshInterval2);
 					 }
 				 }, 10);
+				 
+				 ****/
 				 
 				 
 				 
