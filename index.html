@@ -1,10 +1,5 @@
 <html>
 	
-
-
-	
-	
-	
 	
 	
 <style>
@@ -192,40 +187,8 @@
 	 
 	 function translate(data, eventInfo){
 		 
-		
-		 
 		 if(data.state === "init"){
-			 
-			 
-			 /*****
-			 
-			 var refreshIntervalId1;
-			 refreshIntervalId1 = setInterval(function(){
-				 if($('.lp_top-text').length > 0){
-					 $('.lp_top-text').text('na mesazhi');
-					 $(".lp_chatting-with-icon").remove();
-					 clearInterval(refreshIntervalId1);
-				 }
-			 }, 10);
-			 
-			 *****/
-			 
-			 
-			 /*****
-			 
-			 var refreshIntervalId2;
-			 refreshIntervalId2 = setInterval(function(){
-				 if($('.lpview_form_textarea').length > 0){
-					 if($(".lpview_form_textarea").attr("placeholder")){
-						 $('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
-						 clearInterval(refreshIntervalId2);
-					 } 
-				 }
-			 }, 10);
-			 
-			 
-			 ****/
-			 
+
 			 var refreshIntervalId3;
 			 refreshIntervalId3 = setInterval(function(){
 				 if(jQuery('#lp_date_line_Today').length > 0){
@@ -233,52 +196,10 @@
 					 clearInterval(refreshIntervalId3);
 				 }
 			 }, 10);
-			 
-			 /****
-			 
-			 var refreshIntervalId4;
-			 refreshIntervalId4 = setInterval(function(){
-				 if($('.lp_sender').length > 0){
-					 var myClasses = document.getElementsByClassName("lp_sender");
-					 for(var i = 0; i < myClasses.length; i++) {
-						 if(myClasses[i].innerHTML === "You"){
-							 myClasses[i].innerHTML = "Ti";
-						 } 
-					 }
-					 clearInterval(refreshIntervalId4);
-				 }
-			 }, 10);
-			 
-			 
-			 *****/
-			 
-			 /****
-			 
-			 var refreshIntervalId5;
-			 refreshIntervalId5 = setInterval(function(){
-				 if($('.lp_title').length > 0){
-					 var myClosure = document.getElementsByClassName("lp_title");
-					 for(var i = 0; i < myClosure.length; i++) {
-						 if(myClosure[i].innerHTML === "End conversation"){
-							 myClosure[i].innerHTML = "Mbyll biseden";
-							 clearInterval(refreshIntervalId5);
-						 } 
-					 }
-					 
-				 }
-			 }, 10);
-			 
-			 *****/
-			 
-			 
-			 
+
 			 
 		 }
-		 
-		 
-		 
-		 // $('.lp_top-text').text('na mesazhi');
-		 // $(".lp_chatting-with-icon").remove();
+
 		 
 	 }
 
@@ -295,7 +216,7 @@
 			 setTimeout(function(){
 				 var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
 				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
-				 //iPhone Version:
+
 				 if (isMacLike || isIOS) {
 					 jQuery(".lpview_form_textarea").blur();
 					 var $htmlOrBody = jQuery('html, body'); // scrollTop works on <body> for some browsers, <html> for others
@@ -349,11 +270,7 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 
 			 mutations.forEach(function(mutation) {
-				 // console.log(mutation);
-				 // var myLength = mutation.target.children.length -1;
-				 console.log(mutation.target.className);
-				 
-				
+
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
 
@@ -380,7 +297,7 @@
 						 }
 						 
 					 }
-					 console.log("yes!! This is lp_main!")
+					
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_top_menu") > -1){
@@ -391,15 +308,10 @@
 						var myNode =  mySmallIcon[0];
 						 myNode.parentNode.removeChild(myNode);
 					 }
-					 
-					 
-					 
-					 console.log("yes!! This is a top menu!")
+
 				 }
 				 
-				 
-				 
-				 // if(mutation.target.className.indexOf("lpc_composer") > -1){
+
 				 if(mutation.target.className.indexOf("lpc_message-area") > -1){
 					 
 					 var refreshIntervalTextBox;
@@ -420,11 +332,6 @@
 						 jQuery(".lp_input_area").css("left","10px");
 					 }
 					 
-					 
-					 
-					 
-					 
-					 console.log("container");
 
 				 }
 				 
@@ -444,9 +351,7 @@
 							 this.textContent = this.textContent.replace('Now','Tani');
 						 });
 					 }
-					 
-					 
-					 console.log("yes!! This is a new line!")
+
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_lpview_mp") > -1){
@@ -457,7 +362,6 @@
 						 document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
 					 }
 					 
-					 console.log("yes!! This is a confirmation closure")
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_survey_container") > -1){
@@ -479,9 +383,7 @@
 						 jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
 						 jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
 					 }
-					 
-					 
-					 console.log("yes!! This is a survey!")
+
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_csat_rater_current_rating") > -1){
@@ -501,39 +403,16 @@
 					 if(mutation.target.innerHTML === "Very Satisfied"){
 						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
 					 }
-					 
 
 					 
-					 console.log(mutation);
-					 
 				 }
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 /****
-				 if(mutation.target.className.indexOf('lpc_message-area_visitor') > -1){
-					 console.log("yes!! This is a Visitor!")
-				 }
-				 
-				 if (mutation.target.classList.value.indexOf('lpc_message-area__indicator_visitor') > -1) { 
-					 console.log("yes!! This is a Visitor!")
-				 }
-				 ****/
+
 			 });
 		 });
-		 // var config = { childList: true, subtree:true };
-		 // observer.observe(document, config);
-		 
+
 
 		 observer.observe(document, {
-			 // attributes: true,
 			 childList: true,
-			 // characterData: true,
 			 subtree:true
 		 });
 
@@ -564,51 +443,13 @@
 
 		 });
 		 
-		 
 
-
-		 
-		 /*****
-		 
-		 window.onbeforeunload = function(){
-			 // $(".lpc_maximized-header__menu-button").click()
-			 $(".lp_top_close_action").click()
-			 $(".lpc_confirmation-dialog__confirm-button").click()
-
-			 return null;
-
-		 };
-		 
-		 *****/
-		 
-		 
-		 
-		 
 		 
 		 jQuery(document).on('DOMNodeInserted', function(e) {
 			 // console.log(e);
 			 if (e.target.classList.value.indexOf('lpc_message-area_visitor') > -1) { 
 				 console.log("hooray Visitor");
-				 /******
-				 var refreshInterval;
-				 refreshInterval = setInterval(function(){
-					 if(jQuery('.lp_sender').length > 0){
-						 var myClasses = document.getElementsByClassName("lp_sender");
-						 for(var i = 0; i < myClasses.length; i++) {
-							 if(myClasses[i].textContent === "You"){
-								 myClasses[i].textContent = "Ti";
-								 jQuery('.lp_time').contents().filter(function() {
-									 return this.nodeType == 3
-								 }).each(function(){
-									 this.textContent = this.textContent.replace('Now','Tani');
-								 });
-							 } 
-						 }
-						 clearInterval(refreshInterval);
-					 }
-				 }, 10);
 				 
-				 *****/
 				 
 				 var refreshIntervalId2;
 				 var millisecCounterTextBox1 = 0
