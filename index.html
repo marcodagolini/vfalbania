@@ -7,7 +7,16 @@
 	
 <style>
 	
-@font-face { font-family: myVF; src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf'); } 
+@font-face {
+	font-family: myVF;
+	src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf');
+	 src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.svg#svgFontName') format('svg'); /* Legacy iOS */
+	
+	} 
 
 	
 
@@ -354,7 +363,8 @@
 						 myLoader[a].textContent = "Ne ngarkim";
 					 }
 					 
-					 document.getElementsByClassName('lp_rotator')[0].innerHTML = "<img src='https://res.cloudinary.com/djtjkiytu/image/upload/v1585247439/Screenshot_2020-03-26_at_19.25.34.png'>"
+					 // document.getElementsByClassName('lp_rotator')[0].innerHTML = "<img src='https://res.cloudinary.com/djtjkiytu/image/upload/v1585247439/Screenshot_2020-03-26_at_19.25.34.png'>"
+					 document.getElementsByClassName('lp_rotator')[0].innerHTML = ""
 					 
 					 console.log("yes!! This is a test!")
 				 }
