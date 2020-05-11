@@ -348,12 +348,11 @@
 						 
 					 }, 100);
 					 
-					 var refreshIntervalSend;
-					 refreshIntervalSend = setInterval(function(){
+					 
+					 setTimeout(function(){
 						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
 						 var mySendLength = mySend.length;
 						 if(mySendLength > 0){
-							clearInterval(refreshIntervalSend);
 							 for (var a = 0; a < mySendLength; a++){
 								 mySend[a].title = "Dërgo";
 							 } 
