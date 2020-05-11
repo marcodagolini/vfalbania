@@ -373,8 +373,14 @@
 				 
 				 if(mutation.target.className.indexOf("lp_top_menu") > -1){
 					 
-					 var myNode = document.getElementsByClassName("lp_chatting-with-icon")[0];
-					 myNode.parentNode.removeChild(myNode);
+					 var mySmallIcon = document.getElementsByClassName("lp_chatting-with-icon");
+					 var mySmallIconLength = mySmallIcon.length;
+					 for (var a = 0; a < mySmallIconLength; a++){
+						var myNode =  mySmallIcon[a];
+						 myNode.parentNode.removeChild(myNode);
+					 }
+					 
+					 
 					 
 					 console.log("yes!! This is a top menu!")
 				 }
