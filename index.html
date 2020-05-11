@@ -402,11 +402,16 @@
 				 
 					 
 					 
+					 if(document.getElementsByClassName("lp_actions_button").length > 0){
+						 var node = document.getElementsByClassName("lp_actions_button")[0];
+						 node.parentNode.removeChild(node);
+						 jQuery(".lp_input_area").css("position","absolute");
+						 jQuery(".lp_input_area").css("left","10px");
+					 }
 					 
-					 var node = document.getElementsByClassName("lp_actions_button")[0];
-					 node.parentNode.removeChild(node);
-					 jQuery(".lp_input_area").css("position","absolute");
-					 jQuery(".lp_input_area").css("left","10px");
+					 
+					 
+					 
 					 
 					 console.log("container");
 
@@ -435,30 +440,35 @@
 				 
 				 if(mutation.target.className.indexOf("lp_lpview_mp") > -1){
 					 
-					 document.getElementById('dialog_title').textContent = "Dëshiron të përfundosh bisedën?";
-					 document.getElementsByClassName('lp_cancel_button')[0].textContent = "Jo";
-					 document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
+					 if(document.getElementsByClassName('lp_lpview_title').length > 0){
+						 document.getElementById('dialog_title').textContent = "Dëshiron të përfundosh bisedën?";
+						 document.getElementsByClassName('lp_cancel_button')[0].textContent = "Jo";
+						 document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
+					 }
 					 
 					 console.log("yes!! This is a confirmation closure")
 				 }
 				 
 				 if(mutation.target.className.indexOf("lp_survey_container") > -1){
-					 document.getElementsByClassName("lpc_survey-area__question-label")[0].textContent = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
-					 var mySurveyLabelLength = jQuery(".lp_top-text").length;
-					 for(var q = 0; q < mySurveyLabelLength; q++){
-						 if(jQuery(".lp_top-text")[q].textContent === "Thank you"){
-							 jQuery(".lp_top-text")[q].textContent = "Faleminderit";
+					 if(document.getElementsByClassName("lpc_survey-area__question-label").length > 0){
+						 document.getElementsByClassName("lpc_survey-area__question-label")[0].textContent = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
+						 var mySurveyLabelLength = jQuery(".lp_top-text").length;
+						 for(var q = 0; q < mySurveyLabelLength; q++){
+							 if(jQuery(".lp_top-text")[q].textContent === "Thank you"){
+								 jQuery(".lp_top-text")[q].textContent = "Faleminderit";
+							 }
 						 }
+						 jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
+						 jQuery(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
+						 jQuery(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
+						 
+						 jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
+						 jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
+						 jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
+						 jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
+						 jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
 					 }
-					 jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
-					 jQuery(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
-					 jQuery(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
 					 
-					 jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
-					 jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
-					 jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
-					 jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
-					 jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
 					 
 					 console.log("yes!! This is a survey!")
 				 }
