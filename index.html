@@ -309,6 +309,18 @@
 						var myNode =  mySmallIcon[0];
 						 myNode.parentNode.removeChild(myNode);
 					 }
+					 
+					 var myClosure = document.getElementsByClassName("lp_close");
+					 var myClosureLength = myClosure.length;
+					 for (var a = 0; a < myClosureLength; a++){
+						myClosure[a].title = "close";
+					 }
+					 
+					 var myMinimize = document.getElementsByClassName("lp_minimize");
+					 var myMinimizeLength = myMinimize.length;
+					 for (var a = 0; a < myMinimizeLength; a++){
+						myMinimize[a].title = "minimize";
+					 }
 
 				 }
 				 
