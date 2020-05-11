@@ -375,9 +375,17 @@
 				 
 				 // if(mutation.target.className.indexOf("lpc_composer") > -1){
 				 if(mutation.target.className.indexOf("lpc_message-area") > -1){
+					 
+					 var refreshIntervalTextBox;
+					 refreshIntervalTextBox = setInterval(function(){
+						 if(jQuery('.lpview_form_textarea').attr('placeholder') === "Enter text here"){
+							 jQuery('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
+							 clearInterval(refreshIntervalTextBox);
+						 }
+					 }, 100);
 				 
 					 
-					 jQuery('.lpview_form_textarea').attr('placeholder','Shkruaj ketu…');
+					 
 					 
 					 var node = document.getElementsByClassName("lp_actions_button")[0];
 					 node.parentNode.removeChild(node);
