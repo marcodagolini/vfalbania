@@ -226,7 +226,7 @@
 			 
 			 var refreshIntervalId3;
 			 refreshIntervalId3 = setInterval(function(){
-				 if($('#lp_date_line_Today').length > 0){
+				 if(jQuery('#lp_date_line_Today').length > 0){
 					 document.getElementById('lp_date_line_Today').textContent = 'Sot';
 					 clearInterval(refreshIntervalId3);
 				 }
@@ -295,11 +295,11 @@
 				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
 				 //iPhone Version:
 				 if (isMacLike || isIOS) {
-					 $(".lpview_form_textarea").blur();
-					 var $htmlOrBody = $('html, body'); // scrollTop works on <body> for some browsers, <html> for others
-					 $('.lpview_form_textarea').focus(function() {
+					 jQuery(".lpview_form_textarea").blur();
+					 var $htmlOrBody = jQuery('html, body'); // scrollTop works on <body> for some browsers, <html> for others
+					 jQuery('.lpview_form_textarea').focus(function() {
 						 setTimeout(function(){
-							 $htmlOrBody.scrollTop($('.lp_bottom_area').height());
+							 $htmlOrBody.scrollTop(jQuery('.lp_bottom_area').height());
 						 }, 400);
 					 });
 				 }
@@ -311,23 +311,23 @@
 	 function offeredOrNot(){
 		 
 		 
-		 $("#showContainer_lp").click(function(){
-			  $(".showContainer_lp").css("visibility","hidden");
-			  $(".container_disclaimer_lp").css("visibility","visible");
+		 jQuery("#showContainer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","hidden");
+			  jQuery(".container_disclaimer_lp").css("visibility","visible");
 		  });
 		  
-		  $("#accept_lp").mouseup(function() {
-			  if (!$(this).is(':checked')) {
-				  $("#startChat_lp").prop( "disabled", false );
+		  jQuery("#accept_lp").mouseup(function() {
+			  if (!jQuery(this).is(':checked')) {
+				  jQuery("#startChat_lp").prop( "disabled", false );
 				  
 			  } else{
-				  $("#startChat_lp").prop( "disabled", true );
+				  jQuery("#startChat_lp").prop( "disabled", true );
 			  }
 		  });
 		  
-		  $("#closeDisclaimer_lp").click(function(){
-			  $(".showContainer_lp").css("visibility","visible");
-			  $(".container_disclaimer_lp").css("visibility","hidden");
+		  jQuery("#closeDisclaimer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","visible");
+			  jQuery(".container_disclaimer_lp").css("visibility","hidden");
 		  });
 		 
 
