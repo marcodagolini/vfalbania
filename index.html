@@ -516,6 +516,7 @@
 		 
 		 
 		 jQuery("#showContainer_lp").click(function(){
+			  addLanguage();
 			  jQuery(".showContainer_lp").css("visibility","hidden");
 			  jQuery(".container_disclaimer_lp").css("visibility","visible");
 		  });
@@ -548,7 +549,7 @@
 	 
 	 window.onload = function() {
 		 
-		 addLanguage();
+		 
 		 
 		 var observer = new window.MutationObserver(function (mutations) {
 			 
