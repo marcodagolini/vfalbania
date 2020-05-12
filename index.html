@@ -516,7 +516,6 @@
 		 
 		 
 		 jQuery("#showContainer_lp").click(function(){
-			  addLanguage();
 			  jQuery(".showContainer_lp").css("visibility","hidden");
 			  jQuery(".container_disclaimer_lp").css("visibility","visible");
 		  });
@@ -557,6 +556,8 @@
 
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
+					 
+					 addLanguage();
 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
