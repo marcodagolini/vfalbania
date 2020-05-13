@@ -128,6 +128,8 @@
 	 
 	 <script>
 		 
+		 var dictionaryLaunched = false;
+		 
 	function sendLocation(){
 		 setTimeout(function(){
 			 var CurrentLocation = window.location.href;
@@ -571,7 +573,11 @@
 				 
 				 if(mutation.target.className.indexOf("lp_top-text") > -1){
 					 
-					 addLanguage();
+					 if(!dictionaryLaunched){
+						 addLanguage();
+						 dictionaryLaunched = true;
+					 }
+					 
 					 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
