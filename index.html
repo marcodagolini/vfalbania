@@ -129,7 +129,6 @@
 	 
 	 <script>
 		 
-		 var dictionaryLaunched = false;
 		 
 	function sendLocation(){
 		 setTimeout(function(){
@@ -574,17 +573,13 @@
 				 
 				 if(mutation.target.className.indexOf("lp_top-text") > -1){
 					 
-					 if(!dictionaryLaunched){
-						 addLanguage();
-						 dictionaryLaunched = true;
-					 }
-					 
+					 addLanguage();
 					 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
 					 for (var a = 0; a < myLoaderLength; a++){
 						 if(myLoader[a].textContent === "Message us"){
-							 myLoader[a].textContent = "Na shkruaj";
+							 // myLoader[a].textContent = "Na shkruaj";
 						 }
 						 
 					 }
