@@ -517,7 +517,7 @@
 		 
 		 var refreshIntervalEngagement;
 		 refreshIntervalEngagement = setInterval(function(){
-			 if(jQuery("#showContainer_lp".length > 0)){
+			 if(jQuery("#showContainer_lp".length > 0) && jQuery("#disclaimer_lp".length > 0)){
 				 clearInterval(refreshIntervalEngagement);
 				 jQuery("#showContainer_lp").click(function(){
 					 jQuery(".showContainer_lp").css("visibility","hidden");
