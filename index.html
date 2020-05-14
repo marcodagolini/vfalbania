@@ -514,25 +514,27 @@
 	 
 	 function offeredOrNot(){
 		 
-		 
-		 jQuery("#showContainer_lp").click(function(){
-			  jQuery(".showContainer_lp").css("visibility","hidden");
-			  jQuery(".container_disclaimer_lp").css("visibility","visible");
-		  });
-		  
-		  jQuery("#accept_lp").mouseup(function() {
-			  if (!jQuery(this).is(':checked')) {
-				  jQuery("#startChat_lp").prop( "disabled", false );
-				  
-			  } else{
-				  jQuery("#startChat_lp").prop( "disabled", true );
-			  }
-		  });
-		  
-		  jQuery("#closeDisclaimer_lp").click(function(){
-			  jQuery(".showContainer_lp").css("visibility","visible");
-			  jQuery(".container_disclaimer_lp").css("visibility","hidden");
-		  });
+		 var refreshIntervalEngagement;
+		 refreshIntervalEngagement = setInterval(function(){
+			 if(jQuery("#showContainer_lp".length > 0)){
+				 clearInterval(refreshIntervalEngagement);
+				 jQuery("#showContainer_lp").click(function(){
+					 jQuery(".showContainer_lp").css("visibility","hidden");
+					 jQuery(".container_disclaimer_lp").css("visibility","visible");
+				 });
+				 jQuery("#accept_lp").mouseup(function() {
+					 if (!jQuery(this).is(':checked')) {
+						 jQuery("#startChat_lp").prop( "disabled", false );
+					 } else{
+						 jQuery("#startChat_lp").prop( "disabled", true );
+					 }
+				 });
+				 jQuery("#closeDisclaimer_lp").click(function(){
+					 jQuery(".showContainer_lp").css("visibility","visible");
+					 jQuery(".container_disclaimer_lp").css("visibility","hidden");
+				 });
+			 }
+		 }, 100);
 		 
 
 		 
