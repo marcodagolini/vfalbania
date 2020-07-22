@@ -1,20 +1,18 @@
 
-
-
 <html>
-
-
+	
+	
 
 
 	
 <style>
 	
 @font-face {
-	font-family: VodafoneRegular;
-	src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf');
-	src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf')  format('truetype'), /* Safari, Android, iOS */
-		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-family: myVF;
+	src: url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.ttf');
+	src: url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.svg#svgFontName') format('svg'); /* Legacy iOS */
 	
 	}
 	
@@ -32,7 +30,7 @@
     margin-left: 60px;
     font-size: 12.5px;
     color: #4a4d4e;
-    font-family: VodafoneRegular,Arial;
+    font-family: myVF;
   }
   .header_text_lp {
     float: left;
@@ -56,7 +54,7 @@
     bottom: 5px;
     left: 10px;
     margin: 20px 20px;
-    font-family: VodafoneRegular,Arial;
+    font-family: myVF;
     width: 289px;
   }
   .startChat_lp:hover {
@@ -103,7 +101,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 1px transparent;
     border-radius: 10px;
-    font-family: VodafoneRegular,Arial;
+    font-family: myVF;
   }
 
   .header_disclaimer_lp {
@@ -124,14 +122,17 @@
  
 	 
 	 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
 	
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 
 	 
 
-<!-- BEGIN LivePerson Monitor. -->
-<script type="text/javascript">	
+<script type="text/javascript">
+	
+	
 	window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window.lpTag={wl:lpTag.wl||null,scp:lpTag.scp||null,site:'75070639'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:'1.10.0',_tagCount:1,protocol:'https:',events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){t._domReady('domReady')}):(window.addEventListener('DOMContentLoaded',function(){t._domReady('contReady')},!1),window.addEventListener('load',function(){t._domReady('domReady')},!1)),'undefined'===typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;
 
       function adjust(data, eventInfo) {
@@ -155,7 +156,10 @@
         }
       }
 
-      function offeredOrNot() {	      
+      function offeredOrNot() {
+	      
+
+	      
 	      if(window.innerWidth > 1025){
 		      jQuery('.LPMcontainer').css('z-index', 100)
 	      } else{
@@ -169,7 +173,9 @@
 			      jQuery(".engagement_lp").css("bottom", "74px");
 		      }
 	      }
-	      	      
+	      
+
+	      
 	      jQuery(window).resize(function() {
 		      if(window.innerWidth > 1025){
 			      jQuery('.LPMcontainer').css('z-index', 100)
@@ -673,8 +679,8 @@
       }
       checkElements();
 
-</script>
-<!-- END LivePerson Monitor. -->
+		 
+	 </script>
 
  
  
@@ -694,6 +700,7 @@
   
 
  </script>
+	 
  
  
 </body>
